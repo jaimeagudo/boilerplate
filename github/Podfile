@@ -1,10 +1,10 @@
 source 'https://github.com/CocoaPods/Specs'
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 #-------------- CocoaPods 0.x ---------------
-
+=begin
 target 'github' do
     pod 'RxSwift', '~> 2.0'
     pod 'RxCocoa', '~> 2.0'
@@ -19,10 +19,10 @@ target :unit_tests, :exclusive => true do
   pod 'RxBlocking', '~> 2.0'
   pod 'RxTests', '~> 2.2'
 end
-
+=end
 
 #-------------- CocoaPods 1.0 Pre ---------------
-=begin
+
 inhibit_all_warnings!
 project 'github.xcodeproj'
 
@@ -30,7 +30,8 @@ def sharedPods
   pod 'RxSwift', '~> 2.0'
   pod 'RxCocoa', '~> 2.0'
   pod 'Moya/RxSwift'
-  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  pod 'SwiftyJSON'
+#, :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 
 def testPods
@@ -47,4 +48,3 @@ target 'githubTests' do
   sharedPods
   testPods
 end
-=end
