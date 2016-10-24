@@ -3,25 +3,7 @@ source 'https://github.com/CocoaPods/Specs'
 platform :ios, '9.0'
 use_frameworks!
 
-#-------------- CocoaPods 0.x ---------------
-=begin
-target 'github' do
-    pod 'RxSwift', '~> 2.0'
-    pod 'RxCocoa', '~> 2.0'
-    pod 'Moya/RxSwift'
-    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-end
-
-target :unit_tests, :exclusive => true do
-  link_with 'githubTests'
-  pod 'Quick', '~> 0.8.0'
-  pod 'Nimble', '3.0.0'
-  pod 'RxBlocking', '~> 2.0'
-  pod 'RxTests', '~> 2.2'
-end
-=end
-
-#-------------- CocoaPods 1.0 Pre ---------------
+#-------------- CocoaPods 1.X ---------------
 
 inhibit_all_warnings!
 project 'github.xcodeproj'
@@ -31,6 +13,9 @@ def sharedPods
   pod 'RxCocoa', '~> 2.0'
   pod 'Moya/RxSwift'
   pod 'SwiftyJSON'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
 #, :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 

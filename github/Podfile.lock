@@ -1,22 +1,50 @@
 PODS:
-  - Alamofire (3.4.0)
-  - Moya/Core (6.4.0):
-    - Alamofire (~> 3.0)
+  - Alamofire (3.5.1)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FacebookCore (0.2.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.15)
+  - FacebookLogin (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKLoginKit (~> 4.15)
+  - FacebookShare (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKShareKit (~> 4.15)
+  - FBSDKCoreKit (4.16.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.16.1):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.16.1):
+    - FBSDKCoreKit
+  - Moya/Core (7.0.2):
+    - Alamofire (~> 3.5)
     - Result (~> 2.0)
-  - Moya/RxSwift (6.4.0):
+  - Moya/RxSwift (7.0.2):
     - Moya/Core
     - RxSwift (~> 2.0)
   - Nimble (3.0.0)
   - Quick (0.8.0)
-  - Result (2.0.0)
-  - RxBlocking (2.5.0):
+  - Result (2.1.3)
+  - RxBlocking (2.6.0):
     - RxSwift (~> 2.5)
-  - RxCocoa (2.5.0):
+  - RxCocoa (2.6.0):
     - RxSwift (~> 2.5)
-  - RxSwift (2.5.0)
-  - SwiftyJSON (2.3.2)
+  - RxSwift (2.6.0)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - Moya/RxSwift
   - Nimble (= 3.0.0)
   - Quick (~> 0.8.0)
@@ -26,16 +54,23 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
-  Moya: 4d526954c8afd79820991393d40d7d8af756ceee
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
+  FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
+  FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
+  FBSDKCoreKit: 6feac4e8921ccd7afa83fb1df6291dc6eec42c7c
+  FBSDKLoginKit: 469a56cebe2e1ed62b1621d0b155970fd6aac2d8
+  FBSDKShareKit: 53af0239b5bd2ebf191f32f75991245a208cc982
+  Moya: 430be684a6a53d5ad8c0b8222c4232d4f1810848
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
-  Result: 9e75e1111c774c6ac594e14907b15057053a7959
-  RxBlocking: 595d9ab56dde6b00beaa5aba40e95b150d2135f1
-  RxCocoa: e1b1562e57a554d0fb2aabf9d71b637f177257c7
-  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
+  RxBlocking: f2e0a7e74d5e9d3029d2b1118e2af01f583fbdd8
+  RxCocoa: 89ab00d5753502520227940e3a0e0a0413683c6b
+  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 140cf456baed869a245618dd8be3dd72974afd81
+PODFILE CHECKSUM: ac75f8634ba090d7ed5ed6133eacf94252e587e9
 
 COCOAPODS: 1.1.1
